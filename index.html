@@ -5,36 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador de Texto</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
-<body class="body">
+<body>
     <header>
-        <img class="logo" src="/assets/Alura.png" alt="Ícone A de Alura">
+        <img class="logo" src="assets/Alura.png" alt="Logo A de Alura">
     </header>
-
-    <main class="main">
+    <main>
         <section>
             <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto..."></textarea>
-
-            <div class="info">
+            <div class="Info">
                 <h6>Apenas letras minúsculas e sem acento.</h6>
             </div>
-
             <div class="botoes">
-                <button class="botao">Criptografar</button>
-                <button class="botao2">Descriptografar</button>
+                <button class="btn-encriptar" onclick="btnencriptar()">Criptografar</button>
+                <button class="btn-desencriptar" onclick="btndesencriptar()">Descriptografar</button>
             </div>
-        </section>
-
+        </section> 
+        
         <section>
             <textarea class="mensagem" cols="20" rows="10"></textarea>
-            <button class="btn-copiar">Copiar</button>
+            <button class="btn-copiar" onclick="btncopiar()">Copiar</button>
         </section>
-
     </main>
 
     <footer>
-        <p class="footer">Desenvolvido por Gabriel Carvalho em 08/24 para o desafio Decodificador de Texto ONE!</p>
+        <p class="footer">Desenvolvido por <strong><i class="fa fa-linkedin-square"></i><a  href="https://www.linkedin.com/in/cttbiel/">/cttbiel</a></strong> </p>
     </footer>
+
+    <script src="/decod.js"></script>
+
 </body>
 </html>
