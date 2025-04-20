@@ -1,117 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Matemasie&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/info.css');
-
 :root {
-    --Inter: "Matemasie", sans-serif;
-    --cor-1: #000000;
-    --cor-2: #FFED00;
-    --cor-3: #0F6292;
-    --cor-4: #16FF00;
-    --white: rgb(255, 255, 255);
+    --font-principal: "Inter", sans-serif;
+    --font-logo: "BungeeShade", sans-serif;
+
+    --cor-fundo: #333B6A;
+    --cor-destaque1: #CAFBFF;
+    --cor-destaque2: #B7FEAE;
+    --cor-texto-principal: #FFFFFF;
+    --cor-texto-escuro: #1A1A1A;
+    --cor-borda: #8F8389;
 }
 
-*{
-    background-color: black;
-    font-family: var(--Inter);
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.logo{
-    margin-left: 10px;
-    width: 2%;
-    padding-top: 10px
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    font-family: var(--font-principal);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 200px;
 }
 
 main {
+    flex: 1;
     display: flex;
-    margin-left: 80px;
-    margin-bottom: 50px;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.text-area {
-    border: none;
-    color: var(--cor-4);
-    margin-top: 90px;
-    text-transform: lowercase;
+section {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-::placeholder {color: white;}
-   .text-area.focus {
-        outline: none;
-}
-
+.text-area,
 .mensagem {
-    background: black;
-    background-image: url(/assets/Girl.png);
-    background-repeat: no-repeat;
+    width: 100%;
+    padding: 15px;
     border: none;
-    border-radius: 24px;
-    color: var(--cor-2);
-    margin-left: 98px;
-    margin-top: 20px;
-    padding-left: 20px;
-    position: fixed;
-}
-.mensagem:focus {
-    outline: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    background-color: var(--cor-destaque1);
+    color: var(--cor-texto-escuro);
 }
 
 .botoes {
     display: flex;
-    margin-top: 18px;
-    gap: 1.5rem;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.btn-encriptar {
+    background-color: var(--cor-destaque1);
+    color: var(--cor-texto-escuro);
+}
+
+.btn-encriptar:hover {
+    background-color: var(--cor-destaque2);
 }
 
 .btn-desencriptar {
-    background-color: var(--cor-2);
-    border-radius: 24px;
-    background: black;
-    padding: 6px;
-    color: var(--cor-2);
-    height: 67px;
-    width: 328px;
-    cursor: pointer;
-    border: 1px solid var(--cor-2);
+    background-color: var(--cor-destaque2);
+    color: var(--cor-texto-escuro);
 }
 
-.btn-encriptar{
-    background-color: var(--cor-2);
-    border-radius: 24px;
-    height: 67px;
-    border: 1px solid var(--cor-2);
-    width: 328px;
-    cursor: pointer;
-    color: white;
+.btn-desencriptar:hover {
+    background-color: var(--cor-destaque1);
 }
 
 .btn-copiar {
-    cursor:pointer;
-    height: 67px;
-    margin-left: 108px;
-    margin-top: 402px;
-    position: absolute;
-    width: 336px;
-    border-radius: 24px;
-    border: 1px solid var(--cor-2);
-    background-color: var(--cor-2);
-    
+    background-color: var(--cor-destaque1);
+    color: var(--cor-texto-escuro);
 }
 
-.info{
-    color: var(--cor-4);
-    font-size: 18px;
+.btn-copiar:hover {
+    background-color: var(--cor-destaque2);
 }
 
+.Info h6 {
+    font-size: 0.8rem;
+    color: var(--cor-texto-principal);
+    opacity: 0.7;
+}
 
-
-.footer {
-    color: black;
-    background-color: aqua;
-    width: 1200px;
-    border-radius: 500px;
+footer {
     text-align: center;
-    font-family: var(--Inter);
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--cor-destaque2);
     text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

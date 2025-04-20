@@ -55,7 +55,9 @@ function desencriptar (stringDesencriptada) {
 
 
 function btncopiar() {
-    navigator.clipboard.writeText(input.value).then(() => {
-      alert('Copied to Clipboard')
-    })
-  }
+    navigator.clipboard.writeText(mensagem.value).then(() => {
+        alert('Texto copiado para a área de transferência!');
+    }).catch(err => {
+        alert('Erro ao copiar: ' + err);
+    });
+}
